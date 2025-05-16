@@ -60,7 +60,7 @@ contract FastCredit is ERC721URIStorage, AccessControl, Ownable {
         uint256 initialIncome,
         string memory uri
     ) public onlyRole(MINTER_ROLE) returns (uint256) {
-        require(_userPassports[user] == 0, "User already has a credit passport");
+        // require(_userPassports[user] == 0, "User already has a credit passport");
         
         _tokenIds.increment();
         uint256 newTokenId = _tokenIds.current();
@@ -157,7 +157,7 @@ contract FastCredit is ERC721URIStorage, AccessControl, Ownable {
     /**
      * @dev Required override for OpenZeppelin contracts
      */
-    function supportsInterface(bytes4 interfaceId) public view override(ERC721, AccessControl) returns (bool) {
+    function supportsInterface(bytes4 interfaceId) public view override(ERC721URIStorage, AccessControl) returns (bool) {
         return super.supportsInterface(interfaceId);
     }
 } 

@@ -116,3 +116,66 @@ npx hardhat test
 ## Licensing
 
 This project is licensed under MIT License.
+
+# FastCredit Demo
+
+## Deployed Contract Addresses (Bahamut Testnet)
+- **FastCredit (NFT):** `0x410035fFCd2c21f5B2a0473016A78cE5ffCF2b07`
+- **FastCreditStaking:** `0x92471aD0ED84d2172eA0A3ee65dED3F17eE9DAC0`
+
+---
+
+## Product Flow & Architecture
+
+**FastCredit** is a hybrid onchain/offchain credit passport system powered by AI and staking, designed for seamless user onboarding and demoability.
+
+### Demo Flow
+1. **Stake FTN (Capped):**
+   - User stakes FTN (native token) to get an initial credit rank (up to SILVER).
+   - Contract: `FastCreditStaking`.
+   - UI: `/start/stake`.
+2. **AI Document Verification:**
+   - User uploads income documents (file/camera).
+   - Gemini AI verifies docs and suggests a new rank.
+   - UI: `/start/verify`.
+3. **Stake Again (Uncapped):**
+   - User is prompted to stake 0.4 FTN (or more) to unlock DIAMOND rank.
+   - UI: `/start/stake2`.
+4. **Mint NFT:**
+   - User mints their FastCredit NFT, reflecting their final, AI-verified rank and staked amount.
+   - NFT is minted onchain, visible on explorer.
+   - UI: `/start/mint`.
+
+### Key Features
+- **Staking Contract:**
+  - Allows multiple stakes per user (for demo flexibility).
+  - Mints a new NFT on every stake.
+  - Uses FTN (native) for staking.
+- **NFT Contract:**
+  - No longer restricts to one NFT per user (for demo).
+  - Stores rank, stake amount, and verified income.
+- **AI Verification:**
+  - Gemini AI runs on backend, verifies uploaded docs, and suggests rank.
+- **Frontend:**
+  - Built with Next.js/React, minimal and clean UI.
+  - Uses Privy for embedded wallet and Bahamut Testnet.
+  - Automatic navigation between steps.
+  - Error handling for contract/network/auth issues.
+
+### Architecture
+- **Contracts:** Solidity, OpenZeppelin, deployed to Bahamut Testnet.
+- **Frontend:** Next.js, Privy, Ethers.js for contract calls.
+- **Backend:** Node.js/Express (for AI verification, if running locally).
+
+---
+
+## Quick Start
+1. Connect wallet (Privy embedded, Bahamut Testnet).
+2. Stake FTN to get started.
+3. Upload docs for AI verification.
+4. Stake again to unlock higher rank.
+5. Mint your FastCredit NFT and view on explorer.
+
+---
+
+For more details, see the code and comments in the respective contract and frontend files.
