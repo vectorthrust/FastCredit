@@ -1,5 +1,6 @@
-# FastCredit
+<img width="200" alt="Screenshot 2025-05-16 at 4 48 20 AM" src="https://github.com/user-attachments/assets/18dfe512-74eb-43dc-82fc-6c759eff5937" />
 
+## FastCredit
 FastCredit is an AI-powered financial identity system built on the Bahamut blockchain that provides unbanked and gig workers with a verifiable financial passport.
 
 ## Overview
