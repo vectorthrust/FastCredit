@@ -4,6 +4,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { useSendTransaction, usePrivy } from '@privy-io/react-auth';
 import { Interface, ethers } from 'ethers';
 import { IoDiamondOutline } from 'react-icons/io5';
+import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
 
 const FAST_CREDIT_CONTRACT_ADDRESS = '0x410035fFCd2c21f5B2a0473016A78cE5ffCF2b07';
 const FAST_CREDIT_ABI = [
@@ -21,6 +23,12 @@ export default function MintPage() {
   // Simulate minting as already done after staking
   const handleMint = async () => {
     setMinted(true);
+  };
+
+  const router = useRouter();
+
+  const handleRedirect = () => {
+    router.push('/start/proof'); // Replace with your actual route
   };
 
   if (!ready) {
@@ -67,7 +75,7 @@ export default function MintPage() {
                 <div className="mb-2">Rank: <b>DIAMOND</b></div>
                 <div className="text-green-600 font-medium mb-2">Your credit passport is now on-chain!</div>
 
-                              <Card className="w-full border border-gray-200 p-4 pb-3">
+                              <Card className="w-full border border-gray-200 p-4">
                                 {/* Badge Container with continuous spin animation */}
                                 <div className="relative w-56 h-56 mx-auto flex items-center justify-center perspective-badge">
                                   <div className="absolute inset-0 flex items-center justify-center">
@@ -128,10 +136,23 @@ export default function MintPage() {
               }
             }
           `}</style>
+                <Button className='bg-[#ff008c] mt-4' onClick={handleRedirect}>Generate Proof</Button>
               </div>
             )}
           </CardContent>
         </Card>
+        <div className="absolute bottom-0 left-0 mb-4 ml-4 text-sm text-gray-500">
+          <span><b>Built</b> with ❤️ by Hitarth & Ali</span>
+        </div>
+        <div className="absolute bottom-0 right-0 mb-4 mr-4 text-sm text-gray-500">
+          <span><b>Powered</b> by Bahamut
+            <img
+                  src="https://s1.coincarp.com/logo/2/fastex.png?style=200&v=1696814957"
+                  alt="icon"
+                  className="inline-block w-4 h-4 ml-1 mb-1"
+              />
+          </span>
+        </div>
       </div>
     </div>
   );
