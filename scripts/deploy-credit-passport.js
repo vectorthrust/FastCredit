@@ -13,7 +13,7 @@ async function main() {
   
   // For testnet, we need to deploy a mock USDC token if not available
   let usdcAddress;
-  
+  // minor change
   if (network.chainId === 1422) { // Bahamut testnet
     const MockUSDC = await hre.ethers.getContractFactory("MockUSDC");
     const mockUSDC = await MockUSDC.deploy();
