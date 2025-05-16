@@ -1,133 +1,146 @@
 <img width="200" alt="Screenshot 2025-05-16 at 4 48 20 AM" src="https://github.com/user-attachments/assets/18dfe512-74eb-43dc-82fc-6c759eff5937" />
 
-## FastCredit
-FastCredit is an AI-powered financial identity system built on the Bahamut blockchain that provides unbanked and gig workers with a verifiable financial passport.
+# FastCredit: AI-Powered On-Chain Credit Passports
 
-## Overview
+FastCredit is a decentralized, AI-driven platform that empowers unbanked and gig workers to build a verifiable, evolving financial identity on the Bahamut blockchain.
 
-Credit Passport is a decentralized solution that helps gig workers and unbanked individuals establish a verifiable financial identity. The system uses AI to verify income data from various sources (receipts, voice notes, etc.) and mints a unique NFT "credit passport" that evolves over time as users add more proof of income.
+---
 
-## Problem Statement
+## ❗ Problem Statement
+- **1.4 Billion Unbanked Adults Globally:** According to the World Bank, 1.4 billion adults lack access to essential financial services.
+- **Gig Workers Face Credit Challenges:** Nearly half of gig workers are denied financial services due to traditional credit scoring that ignores their income patterns.
+- **"Credit Invisible" Individuals:** Many are excluded from the financial system because they lack a formal credit history, making it hard to prove creditworthiness.
 
-- **1.4 Billion Unbanked Adults Globally**: According to the World Bank, approximately 1.4 billion adults worldwide remain unbanked, lacking access to essential financial services.
-- **Gig Workers Face Credit Challenges**: Nearly half (48.9%) of gig workers have been denied access to financial services they could afford, primarily due to traditional credit scoring systems that don't account for their income patterns.
-- **"Credit Invisible" Individuals**: Many gig workers are labeled as "credit invisible" because they lack traditional credit histories.
+---
 
-## Solution
+## 🚀 Deployed Contracts
+- **FastCreditStaking (Bahamut Testnet):** [0x92471aD0ED84d2172eA0A3ee65dED3F17eE9DAC0 on FTNScan](https://horizon.ftnscan.com/address/0x92471aD0ED84d2172eA0A3ee65dED3F17eE9DAC0)
+- **FastCredit (NFT):** `0x410035fFCd2c21f5B2a0473016A78cE5ffCF2b07`
 
-Our Credit Passport system enables gig workers and unbanked individuals to establish a verifiable financial identity:
+## 🎥 Demo Video
+[![Watch the demo](https://user-images.githubusercontent.com/18dfe512-74eb-43dc-82fc-6c759eff5937/your-thumbnail.png)](https://www.tella.tv/video/proving-credit-worthiness-7ghe)
 
-1. **Income Verification via AI**: Users can upload receipts or voice notes detailing their income. Gemini AI processes and verifies this information.
-2. **Accessible Staking**: Users stake a small amount of USDC, demonstrating financial commitment.
-3. **Minting Credit NFTs**: A smart contract on Bahamut mints a unique NFT "credit passport" encapsulating the user's income summary and a basic reputation score.
-4. **Building Financial Identity**: Over time, as users add more income proof, their NFT evolves, serving as a dynamic, on-chain financial identity.
+[Watch the full demo on Tella](https://www.tella.tv/video/proving-credit-worthiness-7ghe)
 
-## Smart Contracts
+---
 
-The system comprises three key smart contracts:
+## 🏆 Key Features
+- **Embedded Wallets:** Seamless onboarding with Privy-powered wallets.
+- **Staking for Reputation:** Users stake FTN to initiate their credit journey and receive a rank.
+- **AI Income Verification:** Gemini AI verifies income docs (receipts, voice notes, etc.) for dynamic rank upgrades.
+- **NFT Credit Passports:** Mintable, upgradable NFTs represent a user's financial status and evolve as more data is added.
+- **EVM Compatibility:** Exportable signatures to prove credit status across any EVM dApp.
 
-### 1. FastCredit.sol
+---
 
-An NFT contract representing the user's financial identity, using a 5-tier rank system:
-- BRONZE
-- SILVER
-- GOLD
-- PLATINUM
-- DIAMOND
+## 🚦 User Flow
+1. **Wallet Creation & Onramp:** Instantly create an embedded wallet and onramp to FTN.
+2. **Stake FTN:** Stake tokens to receive an initial (capped) credit rank.
+3. **AI Verification:** Upload income documents for AI-powered verification and rank upgrades.
+4. **Mint NFT Passport:** Mint your dynamic credit passport NFT.
+5. **Prove Credit Anywhere:** Export a signature to prove your rank on any EVM-compatible dApp.
 
-### 2. PassportStaking.sol
+---
 
-Allows users to stake USDC to create their FastCredit passport. The rank is determined by:
-- Stake amount - Users stake USDC once to create their passport
-- Income verification - Users can improve their rank through verified income
+## 🛠️ Smart Contract Architecture
 
-### 3. AIVerifier.sol
+### FastCredit.sol
+- ERC-721 NFT contract representing a user's financial identity and rank (BRONZE, SILVER, GOLD, PLATINUM, DIAMOND).
+- Stores stake amount, verified income, and allows for dynamic upgrades via AI verification.
+- Only authorized contracts can mint or update passports.
 
-A placeholder contract for AI-based income verification where the frontend team will implement document verification processes.
+### PassportStaking.sol
+- Users stake FTN to mint their Credit Passport NFT.
+- Rank is determined by the amount staked (with thresholds for each rank).
+- Allows multiple stakes per user for demo flexibility.
+- Enforces a lock period before unstaking.
 
-## Technology Stack
+### AIVerifier.sol
+- Handles verification of user income data through an oracle pattern.
+- Integrates with backend AI (Gemini) to verify documents and update NFT rank.
+- Rank can be upgraded based on verified income, never downgraded.
 
-- **Blockchain**: Bahamut
-- **Smart Contracts**: Solidity
-- **Development Environment**: Hardhat
-- **AI**: Google Gemini AI
-- **Frontend**: React (not included in this repository)
+---
 
-## Getting Started
+## 🌐 Technology Stack
+- **Blockchain:** Bahamut (Testnet)
+- **Smart Contracts:** Solidity, Hardhat, OpenZeppelin
+- **AI:** Google Gemini API
+- **Frontend:** Next.js, React, Privy, Ethers.js
+- **Backend:** Node.js/Express (for AI verification, if running locally)
+
+---
+
+## 🧑‍💻 Quick Start
 
 ### Prerequisites
-
 - Node.js and npm
 - Hardhat
 - Metamask wallet
 - Google Gemini API key
 
 ### Installation
-
 1. Clone the repository:
-```
-git clone https://github.com/yourusername/credit-passport.git
-cd credit-passport
-```
-
+   ```bash
+   git clone https://github.com/yourusername/credit-passport.git
+   cd credit-passport
+   ```
 2. Install dependencies:
-```
-npm install
-```
-
+   ```bash
+   npm install
+   ```
 3. Create a `.env` file with the following variables:
-```
-PRIVATE_KEY=your_private_key
-BAHAMUT_TESTNET_URL=https://bahamut-testnet-rpc.ontheweb3.com
-BAHAMUT_MAINNET_URL=https://bahamut-rpc.ontheweb3.com
-GEMINI_API_KEY=your_gemini_api_key
-```
+   ```
+   PRIVATE_KEY=your_private_key
+   BAHAMUT_TESTNET_URL=https://bahamut-testnet-rpc.ontheweb3.com
+   BAHAMUT_MAINNET_URL=https://bahamut-rpc.ontheweb3.com
+   GEMINI_API_KEY=your_gemini_api_key
+   ```
 
 ### Deployment
-
 Deploy to Bahamut testnet:
-```
+```bash
 npm run deploy -- --network bahamut_testnet
 ```
 
-## Deployment
+---
 
-The contracts are deployed on the Bahamut Horizon testnet (Chain ID: 2552).
+## 🖥️ Frontend
+- Built with Next.js/React for a clean, minimal UI.
+- Uses Privy for embedded wallet and Bahamut Testnet onboarding.
+- Automatic navigation between steps: `/start/stake`, `/start/verify`, `/start/stake2`, `/start/mint`.
+- Error handling for contract/network/auth issues.
 
-### Deployment Steps
-
-1. Deploy FastCredit.sol
-2. Deploy MockUSDC.sol (for testing) or use an existing USDC token
-3. Deploy PassportStaking.sol with FastCredit and USDC addresses
-4. Deploy AIVerifier.sol with FastCredit address
-5. Grant MINTER_ROLE to both PassportStaking and AIVerifier contracts
-
-## Frontend
-
-The frontend directory contains a minimal structure for the frontend team to implement the user interface.
-
-## Testing
-
-The project uses Hardhat for testing and deployment. To run the tests:
-
+To run the frontend:
+```bash
+cd frontend
+npm install
+npm run dev
 ```
-npx hardhat test
-```
-
-## Licensing
-
-This project is licensed under MIT License.
-
-# FastCredit Demo
-
-## Deployed Contract Addresses (Bahamut Testnet)
-- **FastCredit (NFT):** `0x410035fFCd2c21f5B2a0473016A78cE5ffCF2b07`
-- **FastCreditStaking:** `0x92471aD0ED84d2172eA0A3ee65dED3F17eE9DAC0`
 
 ---
 
-## Product Flow & Architecture
+## 🧪 Testing
+The project uses Hardhat for testing and deployment. To run the tests:
+```bash
+npx hardhat test
+```
 
+---
+
+## 📈 Roadmap
+- [x] Bahamut testnet deployment
+- [x] AI-powered income verification
+- [x] NFT credit passport minting
+- [ ] Bahamut mainnet launch
+- [ ] DeFi protocol integrations
+- [ ] Mobile app & UX enhancements
+- [ ] Cross-chain support
+- [ ] Community governance
+
+---
+
+## 📸 Demo Flow & Architecture
 **FastCredit** is a hybrid onchain/offchain credit passport system powered by AI and staking, designed for seamless user onboarding and demoability.
 
 ### Demo Flow
@@ -170,12 +183,8 @@ This project is licensed under MIT License.
 
 ---
 
-## Quick Start
-1. Connect wallet (Privy embedded, Bahamut Testnet).
-2. Stake FTN to get started.
-3. Upload docs for AI verification.
-4. Stake again to unlock higher rank.
-5. Mint your FastCredit NFT and view on explorer.
+## Licensing
+This project is licensed under MIT License.
 
 ---
 
