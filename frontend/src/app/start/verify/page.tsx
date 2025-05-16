@@ -186,10 +186,15 @@ export default function VerifyCard() {
   return (
     <div className="h-screen w-screen flex items-center justify-center bg-white">
       <div className="flex flex-col items-center">
-        <h1 className="text-5xl font-bold tracking-tight mb-6 text-center">
+      <h1 className="text-5xl font-bold tracking-tight mb-6 text-center">
           <b>Fast</b>Credit
+          <img
+            src="https://s1.coincarp.com/logo/2/fastex.png?style=200&v=1696814957"
+            alt="icon"
+            className="inline-block w-6 h-6 align-super ml-1 mb-1"
+          />
         </h1>
-        <Card className="w-[400px] max-w-full overflow-hidden gap-2 relative pb-0">
+        <Card className="w-[400px] max-w-full overflow-hidden gap-2 relative">
           <CardHeader className="z-10">
             <CardTitle className="text-2xl">Verify Income</CardTitle>
             <CardDescription>
