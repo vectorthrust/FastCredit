@@ -18,11 +18,12 @@ FastCredit is a decentralized, AI-driven platform that empowers unbanked and gig
 - **FastCredit (NFT):** `0x410035fFCd2c21f5B2a0473016A78cE5ffCF2b07`
 
 ## 🎥 Demo Video
-[![Watch the demo](https://user-images.githubusercontent.com/18dfe512-74eb-43dc-82fc-6c759eff5937/your-thumbnail.png)](https://www.tella.tv/video/proving-credit-worthiness-7ghe)
 
-[Watch the full demo on Tella](https://www.tella.tv/video/proving-credit-worthiness-7ghe)
+[Watch the demo on Tella](https://www.tella.tv/video/stones-video-1hue)
 
----<img width="541" alt="Screenshot 2025-05-16 at 8 06 40 AM" src="https://github.com/user-attachments/assets/4da87f7f-df03-48bd-bf8b-56fa1007df58" />
+## 📷 Screenshots
+
+<img width="541" alt="Screenshot 2025-05-16 at 8 06 40 AM" src="https://github.com/user-attachments/assets/4da87f7f-df03-48bd-bf8b-56fa1007df58" />
 <img width="466" alt="Screenshot 2025-05-16 at 8 06 58 AM" src="https://github.com/user-attachments/assets/32ab0c8c-dcff-4dfc-b1e2-09215974feab" />
 <img width="1304" alt="Screenshot 2025-05-16 at 8 07 28 AM" src="https://github.com/user-attachments/assets/1c8deaa8-8dad-49aa-8825-9ce1f4d07b79" />
 <img width="437" alt="Screenshot 2025-05-16 at 8 07 54 AM" src="https://github.com/user-attachments/assets/5b736237-e62a-4cb9-8218-c9f3d7c4e4bb" />
