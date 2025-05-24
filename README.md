@@ -21,15 +21,9 @@ FastCredit is a decentralized, AI-driven platform that empowers unbanked and gig
 
 [Watch the demo on Tella](https://www.tella.tv/video/stones-video-1hue)
 
-## 📷 Screenshots
+## ⚡ Demo Gif
 
-<img width="541" alt="Screenshot 2025-05-16 at 8 06 40 AM" src="https://github.com/user-attachments/assets/4da87f7f-df03-48bd-bf8b-56fa1007df58" />
-<img width="466" alt="Screenshot 2025-05-16 at 8 06 58 AM" src="https://github.com/user-attachments/assets/32ab0c8c-dcff-4dfc-b1e2-09215974feab" />
-<img width="1304" alt="Screenshot 2025-05-16 at 8 07 28 AM" src="https://github.com/user-attachments/assets/1c8deaa8-8dad-49aa-8825-9ce1f4d07b79" />
-<img width="437" alt="Screenshot 2025-05-16 at 8 07 54 AM" src="https://github.com/user-attachments/assets/5b736237-e62a-4cb9-8218-c9f3d7c4e4bb" />
-<img width="438" alt="Screenshot 2025-05-16 at 8 08 51 AM" src="https://github.com/user-attachments/assets/e7395828-aef6-4a70-acb7-93c943670c48" />
-<img width="384" alt="Screenshot 2025-05-16 at 8 09 09 AM" src="https://github.com/user-attachments/assets/e2ff6c42-4bbc-4192-8e81-a69e8a74828f" />
-
+![FastCredit](https://github.com/user-attachments/assets/db52505e-2bee-4160-b90f-c27b045cdbf5)
 
 ## 🏆 Key Features
 - **Embedded Wallets:** Seamless onboarding with Privy-powered wallets.
